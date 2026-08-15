@@ -1,0 +1,19 @@
+[1m[32m    Finished[0m test [unoptimized + debuginfo] target(s) in 0.04s
+[1m[32m     Running[0m unittests src/lib.rs (target/debug/deps/rust_tokio_select_send_cancellation_debug_lab-efce8d4122533bba)
+
+running 3 tests
+test tests::a_closed_receiver_must_not_remove_the_pending_item ... [flush] receiverが閉じていたため、Outboxの項目を送信しません
+ok
+test tests::available_capacity_sends_and_removes_the_pending_item ... [outbox] id=normal-request をPermit取得後に取り出しました: pending=0
+[flush] id=normal-request の送信に成功しました
+ok
+test tests::stop_during_a_full_channel_must_preserve_the_pending_item ... [flush] 停止通知を受けました。容量予約はキャンセルされ、項目はOutboxに残ります
+ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[1m[32m   Doc-tests[0m rust-tokio-select-send-cancellation-debug-lab
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
