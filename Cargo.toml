@@ -1,0 +1,9 @@
+[package]
+name = "rust-tokio-select-send-cancellation-debug-lab"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.75"
+publish = false
+
+[dependencies]
+tokio = { version = "=1.37.0", features = ["macros", "rt", "sync"] }

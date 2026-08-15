@@ -1,0 +1,38 @@
+[1m[32m    Updating[0m crates.io index
+[1m[32m Downloading[0m crates ...
+[1m[32m  Downloaded[0m pin-project-lite v0.2.17
+[1m[32m  Downloaded[0m proc-macro2 v1.0.107
+[1m[32m  Downloaded[0m tokio-macros v2.2.0
+[1m[32m  Downloaded[0m quote v1.0.47
+[1m[32m  Downloaded[0m unicode-ident v1.0.24
+[1m[32m  Downloaded[0m syn v2.0.119
+[1m[32m  Downloaded[0m tokio v1.37.0
+[1m[32m   Compiling[0m proc-macro2 v1.0.107
+[1m[32m   Compiling[0m quote v1.0.47
+[1m[32m   Compiling[0m unicode-ident v1.0.24
+[1m[32m   Compiling[0m pin-project-lite v0.2.17
+[1m[32m   Compiling[0m syn v2.0.119
+[1m[32m   Compiling[0m tokio-macros v2.2.0
+[1m[32m   Compiling[0m tokio v1.37.0
+[1m[32m   Compiling[0m rust-tokio-select-send-cancellation-debug-lab v0.1.0 (/home/ubuntu/rust-debug-lab-work/rust-tokio-select-send-cancellation-debug-lab)
+[1m[32m    Finished[0m test [unoptimized + debuginfo] target(s) in 33.02s
+[1m[32m     Running[0m unittests src/lib.rs (target/debug/deps/rust_tokio_select_send_cancellation_debug_lab-efce8d4122533bba)
+
+running 1 test
+[outbox] id=critical-request を先に取り出しました: pending=0
+[flush] 停止通知を受けました。待機中のsend Futureはキャンセルされます
+thread 'tests::stop_during_a_full_channel_must_preserve_the_pending_item' panicked at src/lib.rs:115:9:
+assertion `left == right` failed: 停止を選んだ場合、未送信の項目をOutboxから失ってはいけません
+  left: 0
+ right: 1
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+test tests::stop_during_a_full_channel_must_preserve_the_pending_item ... FAILED
+
+failures:
+
+failures:
+    tests::stop_during_a_full_channel_must_preserve_the_pending_item
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 1 filtered out; finished in 0.00s
+
+[1m[31merror[0m[1m:[0m test failed, to rerun pass `--lib`
